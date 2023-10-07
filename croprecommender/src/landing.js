@@ -10,8 +10,8 @@ function Landing() {
           Using Machine Learning
         </h1>
         <p className="mx-auto mt-6 max-w-2xl text-lg tracking-tight text-slate-700">
-          Most bookkeeping software is accurate, but hard to use. We make the
-          opposite trade-off, and hope you don’t get audited.
+          Agri.AI is a groundbreaking initiative that harnesses the power of
+          machine learning to revolutionize agriculture practices.
         </p>
         <div className="mt-10 flex justify-center gap-x-6">
           <a
