@@ -1,7 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
-
+import logo from "./logo.svg";
+import "./App.css";
+import React, { useEffect, useState } from "react";
 function App() {
+  useEffect(() => {
+    const fetchApiData = async () => {
+      try {
+        // Fetch data from the API using the host URL from your local.env file
+        const response = await fetch(process.env.REACT_APP_API_HOST);
+
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+
+        const jsonData = await response.json();
+        setData(jsonData);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+
+    fetchApiData();
+  }, []);
   return (
     <div className="App">
       <header className="App-header">
