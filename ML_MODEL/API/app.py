@@ -1,12 +1,18 @@
 import uvicorn  # used for deploying the model
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 from CROP import CROP
 import numpy as np
 import pandas as pd
 import pickle
 
 app = FastAPI()
-
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+)
 # Loading Model:
 pickle_in = open("./classifier.pkl", "rb")
 classifier = pickle.load(pickle_in)
