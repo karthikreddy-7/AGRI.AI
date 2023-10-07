@@ -17,59 +17,36 @@ function Des() {
           <div class="flex flex-col flex-wrap lg:w-1/2 lg:pl-6 lg:text-left text-center">
             <div class="flex flex-col lg:items-start items-center">
               <div class="flex-grow">
-                <h2 class="text-blue-600 font-bold text-2xl title-font mb-1">
+                <h2 class="text-blue-600 font-bold text-2xl title-font mb-2 mr-3">
                   WHY AGRI.AI ?
                 </h2>
-                <p class="leading-relaxed text-lg mb-3">
+                <p class="leading-relaxed text-lg mb-2">
                   AGRI.AI is an integrated platform that combines three powerful
-                  machine learning models to assist farmers.
+                  machine learning models to assist farmers, hobbyists, and
+                  agriculture enthusiasts.
                 </p>
                 <h4 className="text-black-900 font-bold text-lg">
                   1. Crop Recommendation Model
                 </h4>
                 <p className="text-black-900 text-lg mb-2">
                   Takes user-input details such as nitrogen, potassium,
-                  phosphorous levels, temperature, humidity, and pH of the soil
-                  and predicts the most suitable crop varieties that can be
-                  grown in a given area.
+                  phosphorous levels, temperature, humidity, and pH of the soil.
+                  Using this information, it predicts the most suitable crop
+                  varieties that can be grown, ensuring optimal yield and
+                  resource utilization.
                 </p>
-                <a class="mb-4 text-blue-600 font-bold inline-flex items-center">
-                  Try Now
-                  <svg
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    class="w-4 h-4 ml-2"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M5 12h14M12 5l7 7-7 7"></path>
-                  </svg>
-                </a>
               </div>
               <div class="flex-grow">
                 <h4 className="text-black-900 font-bold text-lg">
                   2. Plant Disease Detection
                 </h4>
                 <p className="text-black-900 text-lg mb-2">
-                  Detects the Disease of the plant by using the image uploaded
-                  by the user.(limited to certain plants).
+                  Keeping your plants healthy is crucial for a successful
+                  harvest. Our second ML model is designed to identify and
+                  diagnose plant diseases. Users can upload images of their
+                  plants, and the model will provide instant feedback, helping
+                  farmers take timely action to protect their crops.
                 </p>
-                <a class="mb-4 text-blue-600 font-bold inline-flex items-center">
-                  Try Now
-                  <svg
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    class="w-4 h-4 ml-2"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M5 12h14M12 5l7 7-7 7"></path>
-                  </svg>
-                </a>
               </div>
               <div class="flex-grow">
                 <h4 className="text-black-900 font-bold text-lg">
@@ -79,20 +56,6 @@ function Des() {
                   Recommends the Fertilizer Required for the plant based on
                   disease detected and the type of soil.(Yet to release.)
                 </p>
-                <a class="mb-4 text-blue-600 font-bold inline-flex items-center">
-                  Try Now
-                  <svg
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    class="w-4 h-4 ml-2"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M5 12h14M12 5l7 7-7 7"></path>
-                  </svg>
-                </a>
               </div>
             </div>
           </div>
