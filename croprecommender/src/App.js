@@ -2,22 +2,39 @@ import logo from "./logo.svg";
 import "./App.css";
 import React, { useEffect, useState } from "react";
 function App() {
-  const host =
-    "https://api.render.com/deploy/srv-ckgd4l212bvs73eggfcg?key=tSuCd0LwDsA";
+  const [response, setResponse] = useState(null);
+  const host = "https://karthikcropapi.onrender.com/prediction";
   useEffect(() => {
-    const fetchApiData = async () => {
+    const postData = async () => {
       try {
-        const response = await fetch(host, {
-          method: "GET", // Specify the HTTP method as GET
-          // You can add other headers or options as needed
-        });
-        console.log(response);
+        const response = await fetch(
+          "https://karthikcropapi.onrender.com/predict",
+          {
+            method: "POST",
+            headers: {
+              Accept: "application/json",
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              N: 0,
+              P: 0,
+              K: 0,
+              temperature: 0,
+              humidity: 0,
+              ph: 0,
+              rainfall: 0,
+            }),
+          }
+        );
+        const data = await response.json();
+        console.log("data is ", data);
+        setResponse(data);
       } catch (error) {
-        console.error("Error fetching data:", error);
+        console.error("Error:", error);
       }
     };
 
-    fetchApiData();
+    postData();
   }, []);
   return (
     <div className="App">
