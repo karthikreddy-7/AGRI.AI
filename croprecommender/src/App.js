@@ -16,18 +16,18 @@ function App() {
               "Content-Type": "application/json",
             },
             body: JSON.stringify({
-              N: 0,
-              P: 0,
-              K: 0,
-              temperature: 0,
-              humidity: 0,
-              ph: 0,
-              rainfall: 0,
+              N: 40,
+              P: 40,
+              K: 40,
+              temperature: 30,
+              humidity: 20,
+              ph: 20,
+              rainfall: 100,
             }),
           }
         );
         const data = await response.json();
-        console.log("data is ", data);
+        console.log("prediction came from the model is ", data);
         setResponse(data);
       } catch (error) {
         console.error("Error:", error);
