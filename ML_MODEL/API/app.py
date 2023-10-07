@@ -8,7 +8,7 @@ import pickle
 app = FastAPI()
 
 # Loading Model:
-pickle_in = open("../classifier.pkl", "rb")
+pickle_in = open("./classifier.pkl", "rb")
 classifier = pickle.load(pickle_in)
 
 
