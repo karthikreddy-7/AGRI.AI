@@ -27,7 +27,7 @@ function App() {
           }
         );
         const data = await response.json();
-        console.log("prediction came from the model is ", data);
+        console.log("prediction came from the model is ", data.result);
         setResponse(data);
       } catch (error) {
         console.error("Error:", error);
