@@ -17,8 +17,8 @@ function Des() {
           <div class="flex flex-col flex-wrap lg:w-1/2 lg:pl-6 lg:text-left text-center">
             <div class="flex flex-col lg:items-start items-center">
               <div class="flex-grow">
-                <h2 class="text-blue-600 font-bold text-3xl title-font mb-2">
-                  Why AGRI.AI ?
+                <h2 class="text-blue-600 font-bold text-2xl title-font mb-1">
+                  WHY AGRI.AI ?
                 </h2>
                 <p class="leading-relaxed text-lg mb-3">
                   AGRI.AI is an integrated platform that combines three powerful
@@ -33,8 +33,8 @@ function Des() {
                   and predicts the most suitable crop varieties that can be
                   grown in a given area.
                 </p>
-                <a class="m-2 text-indigo-500 inline-flex items-center">
-                  Learn More
+                <a class="mb-4 text-blue-600 font-bold inline-flex items-center">
+                  Try Now
                   <svg
                     fill="none"
                     stroke="currentColor"
@@ -52,12 +52,12 @@ function Des() {
                 <h4 className="text-black-900 font-bold text-lg">
                   2. Plant Disease Detection
                 </h4>
-                <p className="text-black-900 text-lg m-2">
+                <p className="text-black-900 text-lg mb-2">
                   Detects the Disease of the plant by using the image uploaded
-                  by the user.(limited to certain plants)
+                  by the user.(limited to certain plants).
                 </p>
-                <a class="mt-2 mb-3 text-indigo-500 inline-flex items-center">
-                  Learn More
+                <a class="mb-4 text-blue-600 font-bold inline-flex items-center">
+                  Try Now
                   <svg
                     fill="none"
                     stroke="currentColor"
@@ -79,8 +79,8 @@ function Des() {
                   Recommends the Fertilizer Required for the plant based on
                   disease detected and the type of soil.(Yet to release.)
                 </p>
-                <a class="m-2 text-indigo-500 inline-flex items-center">
-                  Learn More
+                <a class="mb-4 text-blue-600 font-bold inline-flex items-center">
+                  Try Now
                   <svg
                     fill="none"
                     stroke="currentColor"
