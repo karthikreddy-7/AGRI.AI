@@ -52,6 +52,21 @@ function App() {
         <section id="features" className="h-screen bg-slate-00">
           {<Feature />}
         </section>
+        <section id="croprecommender" className="h-screen bg-slate-200">
+          <div className="m-16 text-xl text-center justify-center">
+            This is crop recommender
+          </div>
+        </section>
+        <section id="plantdisease" className="h-screen bg-slate-00">
+          <div className="m-16 text-xl text-center justify-center">
+            This is Plant disease
+          </div>
+        </section>
+        <section id="fertilizer" className="h-screen bg-slate-200">
+          <div className="m-16 text-xl text-center justify-center">
+            This is Fertilizer Recommender
+          </div>
+        </section>
         <section id="contact" className="h-screen bg-zinc-300"></section>
       </body>
       {<Footer />}
