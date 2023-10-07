@@ -16,13 +16,13 @@ function App() {
               "Content-Type": "application/json",
             },
             body: JSON.stringify({
-              N: 40,
-              P: 40,
-              K: 40,
-              temperature: 30,
-              humidity: 20,
-              ph: 20,
-              rainfall: 100,
+              N: 10,
+              P: 10,
+              K: 10,
+              temperature: 20,
+              humidity: 10,
+              ph: 5,
+              rainfall: 1,
             }),
           }
         );
@@ -36,24 +36,7 @@ function App() {
 
     postData();
   }, []);
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  return <h1 className="text-xl font-bold underline">Hello world!</h1>;
 }
 
 export default App;
