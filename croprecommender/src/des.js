@@ -5,7 +5,7 @@ function Des() {
     <>
       <section class="text-gray-600 body-font">
         <div class="container px-5 py-12 mx-auto flex flex-wrap">
-          <div className="px-8  lg:w-1/2 w-full mb-10 lg:mb-0 rounded-lg overflow-hidden">
+          <div className="px-16  lg:w-1/2 w-full mb-10 lg:mb-0 rounded-lg overflow-hidden">
             <img
               alt="feature"
               className="object-cover object-center"
