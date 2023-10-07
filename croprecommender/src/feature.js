@@ -2,7 +2,7 @@ import "./feature.css";
 function Feature() {
   return (
     <>
-      <div className="flex flex-row justify-center py-12 px-4 ">
+      <div className="flex flex-row justify-center py-6 px-4 ">
         <div class="card m-10 flex flex-col">
           <h3 className="text-3xl font-serif font-bold mb-10 text-blue-600">
             Crop Recommendation Model
