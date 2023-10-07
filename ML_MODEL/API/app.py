@@ -9,9 +9,10 @@ import pickle
 app = FastAPI()
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=["http://localhost:3000"],  # Update with the appropriate origin(s)
     allow_credentials=True,
-    allow_methods=["*"],
+    allow_methods=["GET", "POST", "PUT", "DELETE"],
+    allow_headers=["*"],  # You can specify specific headers here if needed
 )
 # Loading Model:
 pickle_in = open("./classifier.pkl", "rb")
