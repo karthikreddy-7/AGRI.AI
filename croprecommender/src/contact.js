@@ -4,7 +4,7 @@ function Contact() {
       <section class="text-gray-600 body-font relative">
         <div class="container px-5 py-6 mx-auto">
           <div class="flex flex-col text-center w-full mb-4">
-            <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">
+            <h1 class="sm:text-3xl text-2xl font-bold title-font mb-4 text-gray-900">
               Contact Me
             </h1>
             <p class="lg:w-2/3 mx-auto leading-relaxed text-base">
@@ -53,7 +53,7 @@ function Contact() {
               </div>
               <div class="p-2 w-full">
                 <button class="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">
-                  Button
+                  SEND
                 </button>
               </div>
               <div class="p-2 w-full pt-2 mt-2 border-t border-gray-200 text-center">
@@ -128,8 +128,8 @@ function Contact() {
         </div>
         <div>
           <a href="#top">
-            <button className="text-4xl font-extrabold absolute bottom-0 right-10 ">
-              &#8657;
+            <button className="text-lg bg-black text-white font-bold absolute bottom-0 right-10 ">
+              &#8593; TOP
             </button>
           </a>
         </div>
