@@ -5,7 +5,7 @@ function Feature() {
       <div className="flex flex-row justify-center py-2 px-4">
         <div class="card m-10 flex flex-col h-[calc(100vh-120px)]">
           <h3 className="text-3xl font-serif font-bold mb-10 text-blue-600">
-            Crop Recommendation Model
+            <a> Crop Recommendation Model </a>
           </h3>
           <a href="#croprecommender">
             <button>Try Now</button>

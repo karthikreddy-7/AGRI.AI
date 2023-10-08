@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import bg2 from "./img/bg1.jpg";
 function Form({ onSubmit }) {
   const [formValues, setFormValues] = useState({
     N: null,
@@ -199,10 +199,29 @@ function Form({ onSubmit }) {
 function ResultCard({ result, onBack }) {
   return (
     <div className="bg-gradient-to-r from-blue-400 to-violet-400 rounded-lg px-4 m-8 h-[calc(100vh-80px)] relative p-2">
-      <div className="bg-blue-100 flex flex-col p-12 m-6 h-[calc(100vh-240px)] rounded-xl">
-        <div className="text-2xl font-bold flex flex-col justify-between items-center py-12">
-          {result}
+      <div className="bg-blue-100 flex flex-row p-8 m-6 h-[calc(100vh-240px)] rounded-xl">
+        <div className="flex flex-row">
+          {/* First Column (Image) */}
+          <div className="w-full md:w-1/2 py-6">
+            <img src={bg2} alt="Image Description" className="w-full" />
+          </div>
+
+          {/* Vertical Line */}
+          <div className="ml-10 mb-12 hidden md:block w-0.5 bg-black h-[calc(100vh-300px)] rounded-lg"></div>
+
+          {/* Second Column (Text) */}
+          <div className="w-full md:w-1/2 p-8">
+            <div className="text-2xl font-bold">{result}</div>
+            <p className="mt-4 text-lg">
+              The result predicted may not be accurate. it is a approximate
+              choice one can choose and it may vary depending upon several
+              factors. Predicted outcome is based on the past data and choosed
+              with limited factors only. this is not be taken as the primary
+              choice.
+            </p>
+          </div>
         </div>
+
         <button
           className="w-28 absolute right-16 bottom-12 text-white bg-black rounded-lg"
           onClick={onBack}
