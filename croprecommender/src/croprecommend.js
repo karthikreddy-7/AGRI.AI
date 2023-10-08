@@ -199,10 +199,10 @@ function Form({ onSubmit }) {
 function ResultCard({ result, onBack }) {
   return (
     <div className="bg-gradient-to-r from-blue-400 to-violet-400 rounded-lg px-4 m-8 h-[calc(100vh-80px)] relative p-2">
-      <div className="bg-blue-100 flex flex-row p-8 m-6 h-[calc(100vh-240px)] rounded-xl">
+      <div className="bg-blue-100 flex flex-row p-12 m-6 h-[calc(100vh-20 0px)] rounded-xl">
         <div className="flex flex-row">
           {/* First Column (Image) */}
-          <div className="w-full md:w-1/2 py-6">
+          <div className="w-full md:w-1/2 py-4">
             <img src={bg2} alt="Image Description" className="w-full" />
           </div>
 
@@ -223,7 +223,7 @@ function ResultCard({ result, onBack }) {
         </div>
 
         <button
-          className="w-28 absolute right-16 bottom-12 text-white bg-black rounded-lg"
+          className="w-28 absolute right-20 bottom-16 text-white bg-black rounded-lg"
           onClick={onBack}
         >
           Back
