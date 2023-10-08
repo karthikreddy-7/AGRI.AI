@@ -5,16 +5,16 @@ function Des() {
     <>
       <section class="text-gray-600 body-font">
         <div class="container px-5 py-12 mx-auto flex flex-wrap">
-          <div className="px-16  lg:w-1/2 w-full mb-10 lg:mb-0 rounded-lg overflow-hidden">
+          <div className="px-16  lg:w-1/2 w-full mb-10 lg:mb-0 rounded-xl overflow-hidden">
             <img
               alt="feature"
-              className="object-cover object-center"
+              className="object-cover object-center rounded-xl"
               src={bg}
-              style={{ height: "550px", width: "470px" }}
+              style={{ height: "550px", width: "450px" }}
             />
           </div>
 
-          <div class="flex flex-col flex-wrap lg:w-1/2 lg:pl-6 lg:text-left text-center">
+          <div class="flex flex-col flex-wrap lg:w-1/2 lg:pl-2 lg:text-left text-center">
             <div class="flex flex-col lg:items-start items-center">
               <div class="flex-grow">
                 <h2 class="text-blue-600 font-bold text-2xl title-font mb-2 mr-3">

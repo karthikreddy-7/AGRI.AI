@@ -6,6 +6,10 @@ import React, { useEffect, useState } from "react";
 import Landing from "./landing";
 import Des from "./des";
 import Feature from "./feature";
+import Croprecommend from "./croprecommend";
+import Plantdis from "./plantdis";
+import Fertilizer from "./fertilizer";
+import Contact from "./contact";
 function App() {
   const [response, setResponse] = useState(null);
   const host = "https://karthikcropapi.onrender.com/prediction";
@@ -43,7 +47,7 @@ function App() {
   }, []);
   return (
     <>
-      <body className="flex h-full flex-col">
+      <body id="top" className="flex h-full flex-col">
         {<Header />}
         {<Landing />}
         <section id="about" className="h-screen bg-slate-100">
@@ -52,23 +56,20 @@ function App() {
         <section id="features" className="h-screen bg-slate-00">
           {<Feature />}
         </section>
-        <section id="croprecommender" className="h-screen bg-slate-200">
-          <div className="m-16 text-xl text-center justify-center">
-            This is crop recommender
-          </div>
+        <section id="croprecommender" className="h-screen bg-slate-00">
+          {<Croprecommend />}
         </section>
         <section id="plantdisease" className="h-screen bg-slate-00">
-          <div className="m-16 text-xl text-center justify-center">
-            This is Plant disease
-          </div>
+          {<Plantdis />}
         </section>
-        <section id="fertilizer" className="h-screen bg-slate-200">
-          <div className="m-16 text-xl text-center justify-center">
-            This is Fertilizer Recommender
-          </div>
+        <section id="fertilizer" className="h-screen bg-slate-00">
+          {<Fertilizer />}
         </section>
-        <section id="contact" className="h-screen bg-zinc-300"></section>
+        <section id="contact" className="h-screen bg-zinc-100">
+          {<Contact />}
+        </section>
       </body>
+
       {<Footer />}
     </>
   );

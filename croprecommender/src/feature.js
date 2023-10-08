@@ -2,29 +2,29 @@ import "./feature.css";
 function Feature() {
   return (
     <>
-      <div className="flex flex-row justify-center py-6 px-4 ">
-        <div class="card m-10 flex flex-col">
+      <div className="flex flex-row justify-center py-2 px-4">
+        <div class="card m-10 flex flex-col h-[calc(100vh-120px)]">
           <h3 className="text-3xl font-serif font-bold mb-10 text-blue-600">
             Crop Recommendation Model
           </h3>
           <button>
-            <a href="#contact">Try Now</a>
+            <a href="#croprecommender">Try Now</a>
           </button>
         </div>
-        <div class="card m-10 flex flex-col">
+        <div class="card m-10 flex flex-col h-[calc(100vh-120px)]">
           <h3 className="text-3xl font-serif font-bold mb-16 text-blue-600">
             Plant Disease Detection
           </h3>
           <button>
-            <a href="#contact">Try Now</a>
+            <a href="#plantdisease">Try Now</a>
           </button>
         </div>
-        <div class="card m-10 flex flex-col">
+        <div class="card m-10 flex flex-col h-[calc(100vh-120px)]">
           <h3 className="text-3xl font-serif font-bold mb-16 text-blue-600">
             Fertilizer Recommender
           </h3>
           <button>
-            <a href="#contact">Try Now</a>
+            <a href="#fertilizer">Try Now</a>
           </button>
         </div>
       </div>
