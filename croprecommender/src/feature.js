@@ -7,25 +7,25 @@ function Feature() {
           <h3 className="text-3xl font-serif font-bold mb-10 text-blue-600">
             Crop Recommendation Model
           </h3>
-          <button>
-            <a href="#croprecommender">Try Now</a>
-          </button>
+          <a href="#croprecommender">
+            <button>Try Now</button>
+          </a>
         </div>
         <div class="card m-10 flex flex-col h-[calc(100vh-120px)]">
           <h3 className="text-3xl font-serif font-bold mb-16 text-blue-600">
             Plant Disease Detection
           </h3>
-          <button>
-            <a href="#plantdisease">Try Now</a>
-          </button>
+          <a href="#plantdisease">
+            <button>Try Now</button>
+          </a>
         </div>
         <div class="card m-10 flex flex-col h-[calc(100vh-120px)]">
           <h3 className="text-3xl font-serif font-bold mb-16 text-blue-600">
             Fertilizer Recommender
           </h3>
-          <button>
-            <a href="#fertilizer">Try Now</a>
-          </button>
+          <a href="#fertilizer">
+            <button>Try Now</button>
+          </a>
         </div>
       </div>
     </>

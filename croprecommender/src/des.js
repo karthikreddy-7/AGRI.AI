@@ -5,12 +5,11 @@ function Des() {
     <>
       <section class="text-gray-600 body-font">
         <div class="container px-5 py-12 mx-auto flex flex-wrap">
-          <div className="px-16  lg:w-1/2 w-full mb-10 lg:mb-0 rounded-xl overflow-hidden">
+          <div className="px-16  lg:w-1/2 w-full mb-10 lg:mb-0 rounded-xl overflow-hidden h-[calc(100vh-80px)]">
             <img
               alt="feature"
               className="object-cover object-center rounded-xl"
               src={bg}
-              style={{ height: "550px", width: "450px" }}
             />
           </div>
 
