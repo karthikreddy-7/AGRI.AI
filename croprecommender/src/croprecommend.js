@@ -199,20 +199,24 @@ function Form({ onSubmit }) {
 function ResultCard({ result, onBack }) {
   return (
     <div className="bg-gradient-to-r from-blue-400 to-violet-400 rounded-lg px-4 m-8 h-[calc(100vh-80px)] relative p-2">
-      <div className="bg-blue-100 flex flex-row p-12 m-6 h-[calc(100vh-20 0px)] rounded-xl">
+      <div className="bg-blue-100 flex flex-row p-12 m-6 h-[calc(100vh-150px)] rounded-xl">
         <div className="flex flex-row">
           {/* First Column (Image) */}
           <div className="w-full md:w-1/2 py-4">
-            <img src={bg2} alt="Image Description" className="w-full" />
+            <img
+              src={bg2}
+              alt="Image Description"
+              className="w-full h-[calc(100vh-300px)] rounded-2xl"
+            />
           </div>
 
           {/* Vertical Line */}
-          <div className="ml-10 mb-12 hidden md:block w-0.5 bg-black h-[calc(100vh-300px)] rounded-lg"></div>
+          <div className="ml-10 hidden md:block w-0.5 bg-black h-[calc(100vh-240px)] rounded-lg"></div>
 
           {/* Second Column (Text) */}
           <div className="w-full md:w-1/2 p-8">
-            <div className="text-2xl font-bold">{result}</div>
-            <p className="mt-4 text-lg">
+            <div className="text-2xl font-bold text-center">{result}</div>
+            <p className="mt-4 text-xl justify-between text-center">
               The result predicted may not be accurate. it is a approximate
               choice one can choose and it may vary depending upon several
               factors. Predicted outcome is based on the past data and choosed
