@@ -1,4 +1,3 @@
-import logo from "./logo.svg";
 import "./App.css";
 import Footer from "./footer";
 import Header from "./header";
@@ -11,8 +10,6 @@ import Plantdis from "./plantdis";
 import Fertilizer from "./fertilizer";
 import Contact from "./contact";
 function App() {
-  const [response, setResponse] = useState(null);
-  const host = "https://karthikcropapi.onrender.com/prediction";
   useEffect(() => {
     const postData = async () => {
       try {
@@ -37,7 +34,6 @@ function App() {
         );
         const data = await response.json();
         console.log("prediction came from the model is ", data.result);
-        setResponse(data);
       } catch (error) {
         console.error("Error:", error);
       }

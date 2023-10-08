@@ -10,7 +10,6 @@ function Form({ onSubmit }) {
     ph: null,
     Rainfall: null,
   });
-  const [response, setResponse] = useState(null);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -37,12 +36,12 @@ function Form({ onSubmit }) {
     <>
       <div className="bg-gradient-to-r from-violet-400 to-blue-400 rounded-lg px-4 m-8 h-[calc(100vh-80px)]">
         <form onSubmit={handleSubmit}>
-          <div className="text-2xl font-bold flex justify-center items-center py-6">
+          <div className="text-2xl font-bold flex justify-center items-center py-4">
             <h2 className="rounded-lg text-center">
               CROP RECOMMENDATION MODEL
             </h2>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 p-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 p-4">
             {/* Nitrogen Input */}
             <div className="col-span-1 md:col-span-2 lg:col-span-1">
               <label
