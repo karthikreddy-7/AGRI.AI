@@ -5,12 +5,8 @@ function Des() {
     <>
       <section class="text-gray-600 body-font">
         <div class="container px-5 py-12 mx-auto flex flex-wrap">
-          <div className="px-16  lg:w-1/2 w-full mb-10 lg:mb-0 rounded-xl overflow-hidden h-[calc(100vh-80px)]">
-            <img
-              alt="feature"
-              className="object-cover object-center rounded-xl"
-              src={bg}
-            />
+          <div className="px-16  lg:w-1/2 w-full mb-10 lg:mb-0 rounded-2xl overflow-hidden h-[calc(100vh-80px)]">
+            <img alt="feature" className="rounded-xl" src={bg} />
           </div>
 
           <div class="flex flex-col flex-wrap lg:w-1/2 lg:pl-2 lg:text-left text-center">

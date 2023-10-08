@@ -34,7 +34,7 @@ function Form({ onSubmit }) {
 
   return (
     <>
-      <div className="bg-gradient-to-r from-violet-400 to-blue-400 rounded-lg px-4 m-8 h-[calc(100vh-80px)]">
+      <div className="bg-gradient-to-r from-blue-400 to-violet-400 rounded-lg px-4 m-8 h-[calc(100vh-80px)]">
         <form onSubmit={handleSubmit}>
           <div className="text-2xl font-bold flex justify-center items-center py-4">
             <h2 className="rounded-lg text-center">
@@ -198,11 +198,18 @@ function Form({ onSubmit }) {
 }
 function ResultCard({ result, onBack }) {
   return (
-    <div className="bg-gradient-to-r from-violet-400 to-blue-400 rounded-lg px-4 m-8 h-[calc(100vh-80px)]">
-      {/* Display result here */}
-      <div>Result: {result}</div>
-      {/* Back button */}
-      <button onClick={onBack}>Back</button>
+    <div className="bg-gradient-to-r from-blue-400 to-violet-400 rounded-lg px-4 m-8 h-[calc(100vh-80px)] relative p-2">
+      <div className="bg-blue-100 flex flex-col p-12 m-6 h-[calc(100vh-240px)] rounded-xl">
+        <div className="text-2xl font-bold flex flex-col justify-between items-center py-12">
+          {result}
+        </div>
+        <button
+          className="w-28 absolute right-16 bottom-12 text-white bg-black rounded-lg"
+          onClick={onBack}
+        >
+          Back
+        </button>
+      </div>
     </div>
   );
 }
