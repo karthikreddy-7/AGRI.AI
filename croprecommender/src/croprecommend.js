@@ -1,11 +1,45 @@
-function Croprecommend() {
+import React, { useState } from "react";
+
+function Form({ onSubmit }) {
+  const [formValues, setFormValues] = useState({
+    N: null,
+    P: null,
+    K: null,
+    temperature: null,
+    humidity: null,
+    ph: null,
+    Rainfall: null,
+  });
+  const [response, setResponse] = useState(null);
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    // Map input field names to the desired keys
+    const mappedName = {
+      Nitrogen: "N",
+      Phosporus: "P",
+      Potassium: "K",
+      Temperature: "temperature",
+      Humidity: "humidity",
+      Ph: "ph",
+      Rainfall: "rainfall",
+    };
+    const mappedKey = mappedName[name];
+    setFormValues({ ...formValues, [mappedKey]: value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    onSubmit(formValues);
+  };
+
   return (
     <>
-      <div className="bg-gradient-to-r from-blue-300 to-green-300 rounded-lg px-4 m-8 h-[calc(100vh-80px)]">
-        <form action="/predict" method="POST">
+      <div className="bg-gradient-to-r from-violet-400 to-blue-400 rounded-lg px-4 m-8 h-[calc(100vh-80px)]">
+        <form onSubmit={handleSubmit}>
           <div className="text-2xl font-bold flex justify-center items-center py-6">
             <h2 className="rounded-lg text-center">
-              Crop Recommendation Model
+              CROP RECOMMENDATION MODEL
             </h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 p-6">
@@ -25,6 +59,7 @@ function Croprecommend() {
                 className="w-full border rounded-lg py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                 required
                 step="0"
+                onChange={handleInputChange}
               />
             </div>
 
@@ -44,6 +79,7 @@ function Croprecommend() {
                 className="w-full border rounded-lg py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                 required
                 step="0"
+                onChange={handleInputChange}
               />
             </div>
 
@@ -63,6 +99,7 @@ function Croprecommend() {
                 className="w-full border rounded-lg py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                 required
                 step="0"
+                onChange={handleInputChange}
               />
             </div>
 
@@ -82,6 +119,7 @@ function Croprecommend() {
                 placeholder="Enter Temperature in °C"
                 className="w-full border rounded-lg py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                 required
+                onChange={handleInputChange}
               />
             </div>
 
@@ -101,6 +139,7 @@ function Croprecommend() {
                 placeholder="Enter Humidity in %"
                 className="w-full border rounded-lg py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                 required
+                onChange={handleInputChange}
               />
             </div>
 
@@ -120,6 +159,7 @@ function Croprecommend() {
                 placeholder="Enter pH value"
                 className="w-full border rounded-lg py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                 required
+                onChange={handleInputChange}
               />
             </div>
 
@@ -139,6 +179,7 @@ function Croprecommend() {
                 placeholder="Enter Rainfall in mm"
                 className="w-full border rounded-lg py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                 required
+                onChange={handleInputChange}
               />
             </div>
           </div>
@@ -153,6 +194,58 @@ function Croprecommend() {
           </div>
         </form>
       </div>
+    </>
+  );
+}
+function ResultCard({ result, onBack }) {
+  return (
+    <div className="bg-gradient-to-r from-violet-400 to-blue-400 rounded-lg px-4 m-8 h-[calc(100vh-80px)]">
+      {/* Display result here */}
+      <div>Result: {result}</div>
+      {/* Back button */}
+      <button onClick={onBack}>Back</button>
+    </div>
+  );
+}
+
+function Croprecommend() {
+  const [response, setResponse] = useState(null);
+  const [showForm, setShowForm] = useState(true);
+
+  const handleFormSubmit = async (formValues) => {
+    try {
+      const response = await fetch(
+        "https://karthikcropapi.onrender.com/predict",
+        {
+          method: "POST",
+          headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formValues),
+        }
+      );
+      const data = await response.json();
+      console.log("prediction came from the model is ", data.result);
+      setResponse(data.result);
+      setShowForm(false);
+    } catch (error) {
+      console.error("Error:", error);
+    }
+  };
+
+  const handleBack = () => {
+    setResponse(null);
+    setShowForm(true);
+  };
+
+  return (
+    <>
+      {showForm ? (
+        <Form onSubmit={handleFormSubmit} />
+      ) : (
+        <ResultCard result={response} onBack={handleBack} />
+      )}
     </>
   );
 }
