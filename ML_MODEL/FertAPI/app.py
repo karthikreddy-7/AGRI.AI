@@ -1,7 +1,7 @@
 import uvicorn  # used for deploying the model
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from CROP import CROP
+from CROP import FERT
 import numpy as np
 import pandas as pd
 import pickle
@@ -15,7 +15,7 @@ app.add_middleware(
     allow_headers=["*"],  # You can specify specific headers here if needed
 )
 # Loading Model:
-pickle_in = open("./classifier.pkl", "rb")
+pickle_in = open("./Fertclassifier.pkl", "rb")
 classifier = pickle.load(pickle_in)
 
 
@@ -33,50 +33,45 @@ def get_name(name: str):
 
 # creating API for the prediction
 @app.post("/predict")
-def predict_crop(data: CROP):
+def predict_Fertilizer(data: FERT):
     data = data.dict()
     print(data)
-    N = data["N"]
-    P = data["P"]
-    K = data["K"]
-    temperature = data["temperature"]
-    humidity = data["humidity"]
-    ph = data["ph"]
-    rainfall = data["rainfall"]
-    feature_list = [N, P, K, temperature, humidity, ph, rainfall]
-    single_pred = np.array(feature_list).reshape(1, -1)
-    prediction = classifier.predict(single_pred)
+    soil_dict = {"Loamy": 1, "Sandy": 2, "Clayey": 3, "Black": 4, "Red": 5}
 
     crop_dict = {
-        1: "Rice",
-        2: "Maize",
-        3: "Jute",
-        4: "Cotton",
-        5: "Coconut",
-        6: "Papaya",
-        7: "Orange",
-        8: "Apple",
-        9: "Muskmelon",
-        10: "Watermelon",
-        11: "Grapes",
-        12: "Mango",
-        13: "Banana",
-        14: "Pomegranate",
-        15: "Lentil",
-        16: "Blackgram",
-        17: "Mungbean",
-        18: "Mothbeans",
-        19: "Pigeonpeas",
-        20: "Kidneybeans",
-        21: "Chickpea",
-        22: "Coffee",
+        "Sugarcane": 1,
+        "Cotton": 2,
+        "Millets": 3,
+        "Paddy": 4,
+        "Pulses": 5,
+        "Wheat": 6,
+        "Tobacco": 7,
+        "Barley": 8,
+        "Oil seeds": 9,
+        "Ground Nuts": 10,
+        "Maize": 11,
     }
-
-    if prediction[0] in crop_dict:
-        crop = crop_dict[prediction[0]]
-        result = "{} is the best crop to be cultivated right there".format(crop)
-    else:
-        result = "Sorry, we could not determine the best crop to be cultivated with the provided data."
+    Temparature = data["Temparature"]
+    Humidity = data["Humidity"]
+    Moisture = data["Moisture"]
+    Nitrogen = data["Nitrogen"]
+    Potassium = data["Potassium"]
+    Phosphorous = data["Phosphorous"]
+    Soil_Num = soil_dict[data["Soil_Type"]]
+    Crop_Num = crop_dict[data["Crop_Type"]]
+    feature_list = [
+        Temparature,
+        Humidity,
+        Moisture,
+        Nitrogen,
+        Potassium,
+        Phosphorous,
+        Soil_Num,
+        Crop_Num,
+    ]
+    single_pred = np.array(feature_list).reshape(1, -1)
+    prediction = classifier.predict(single_pred)
+    result = "{} is the best Fertilizer to used right there".format(prediction[0])
     return {"result": result}
 
 
