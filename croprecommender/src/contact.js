@@ -128,7 +128,7 @@ function Contact() {
         </div>
         <div>
           <a href="#top">
-            <button className="text-lg bg-black text-white font-bold absolute bottom-0 right-10 ">
+            <button className="text-lg bg-black text-white font-bold absolute bottom-12 right-20 ">
               &#8593; TOP
             </button>
           </a>
