@@ -9,7 +9,9 @@ import Croprecommend from "./croprecommend";
 import Plantdis from "./plantdis";
 import Fertilizer from "./fertilizer";
 import Contact from "./contact";
+import { inject } from "@vercel/analytics";
 function App() {
+  inject();
   useEffect(() => {
     async function fetchdata() {
       try {
