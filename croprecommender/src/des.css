@@ -1,0 +1,11 @@
+/* Add this CSS for smaller screens (e.g., screens with a maximum width of 768px) */
+@media (max-width: 768px) {
+    .text-2xl {
+      font-size: 1.5rem; /* Adjust the font size as needed */
+    }
+  
+    .text-lg {
+      font-size: 1rem; /* Adjust the font size as needed */
+    }
+  }
+  
