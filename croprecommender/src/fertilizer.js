@@ -216,7 +216,7 @@ function Form({ onSubmit }) {
             </div>
           </div>
           {/* Button */}
-          <div className="col-span-1 text-center px-12 py-16">
+          <div className="col-span-1 text-center px-12 py-8">
             <button
               type="submit"
               className="w-64 h-14 bg-black hover:bg-black-700 text-white font-bold py-2 px-4 rounded-lg focus:outline-none focus:shadow-outline"
