@@ -10,6 +10,7 @@ import Plantdis from "./plantdis";
 import Fertilizer from "./fertilizer";
 import Contact from "./contact";
 import { inject } from "@vercel/analytics";
+import { Analytics } from "@vercel/analytics/react";
 function App() {
   inject();
   useEffect(() => {
@@ -49,6 +50,8 @@ function App() {
 
   return (
     <>
+      <Analytics />
+      {inject()}
       <body id="top" className="flex h-full flex-col">
         {<Header />}
         {<Landing />}
