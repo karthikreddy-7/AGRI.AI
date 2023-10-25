@@ -29,7 +29,7 @@ The code for the project is available in Kaggle Notebooks for both crop recommen
 
 ## Deployment
 
-ARGI.AI is deployed on Heroku, making it easily accessible online. Please note that the website may take a moment to load if the server is in hibernation.
+ARGI.AI is deployed on Vercel, making it easily accessible online. Please note that the website may take a moment to load if the server is in hibernation.
 
 ## How to Use
 
